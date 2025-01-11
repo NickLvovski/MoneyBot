@@ -68,7 +68,7 @@ def get_text_messages(message):
         start_date, end_date = get_quarter_dates()
         jql_query = f'project = CS AND issuetype in ("Service Request", "Техническая поддержка") ' \
                     f'AND status in (Resolved, Closed) AND resolution = Fixed ' \
-                    f'AND created >= {start_date} AND created <= {end_date} ORDER BY created ASC'
+                    f'AND resolved >= {start_date} AND resolved <= {end_date} ORDER BY created ASC'
 
         # список для хранения всех тикетов и начальный индекс для постраничной загрузки ч
         issues = []
