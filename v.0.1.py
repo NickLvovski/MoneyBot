@@ -1,7 +1,7 @@
+from datetime import date
 import csv
 import requests
 import telebot
-from datetime import date
 
 # авторизация для запросов к Jira API
 headers = {
